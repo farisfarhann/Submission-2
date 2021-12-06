@@ -5,24 +5,24 @@ const createRestoDetailTemplate = (restaurants) => `
   <img class="resto__poster" src="${CONFIG.BASE_IMAGE_URL + restaurants.pictureId}" alt="${restaurants.name}" />
   <div class="resto__info">
   <h3>Information</h3>
-    <h4>Tagline</h4>
+    <h4>Rating</h4>
     <p>${restaurants.rating}</p>
-    <h4>Release Date</h4>
+    <h4>City</h4>
     <p>${restaurants.city}</p>
   </div>
   <div class="resto__description">
-    <h3>Overview</h3>
+    <h3>Description</h3>
     <p>${restaurants.description}</p>
   </div>
 `;
  
 const createRestoItemTemplate = (restaurants) => `
-  <div class="restaurants-item">
-    <div class="restaurants-item__header">
-        <img class="restaurants-item__header__poster" alt="${restaurants.name}"
+  <div class="resto-item">
+    <div class="resto-item__header">
+        <img class="resto-item__header__poster" alt="${restaurants.name}"
             src="${CONFIG.BASE_IMAGE_URL + restaurants.pictureId}">
         <div class="resto-item__header__rating">
-            <p>⭐️<span class="movie-item__header__rating__score">${restaurants.rating}</span></p>
+            <p>⭐️<span class="resto-item__header__rating__score">${restaurants.rating}</span></p>
         </div>
     </div>
     <div class="resto-item__content">

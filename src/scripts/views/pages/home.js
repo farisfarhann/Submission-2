@@ -18,10 +18,10 @@ const Home = {
   async afterRender() {
     const restaurant = await RestaurantSource.home();
     console.log(restaurant);
-    // const restaurantContainer = document.querySelector('#restos');
-    // restaurant.forEach((restaurants) => {
-    //     restaurantContainer.innerHTML += createRestoItemTemplate(restaurants);
-    // });
+    const restaurantContainer = document.querySelector('#restos');
+    restaurant.forEach((restaurants) => {
+        restaurantContainer.innerHTML += createRestoItemTemplate(restaurants);
+    });
   },
 };
  
