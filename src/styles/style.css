@@ -215,7 +215,7 @@ main {
 
 
 /*
-    Movie
+    Resto detail
   */
 
 .resto {
@@ -229,12 +229,41 @@ main {
 
 .resto__poster {
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
+    padding-top: 10px;
+    margin: 2px auto;
+}
+
+.vcenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resto__title {
+    color: #a3151e;
 }
 
 .resto__info h4 {
     margin: 8px 0;
 }
+
+.content-label {
+    color: #a3151e;
+    text-align: center;
+    padding: 20px 0 10px 0;
+}
+
+.restos-detail {
+    grid-template-columns: 1fr;
+    width: 70%;
+    margin: 10px auto;
+}
+
+.resto__title {
+    text-align: center;
+}
+
 
 
 
