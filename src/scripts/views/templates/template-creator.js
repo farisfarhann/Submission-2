@@ -18,11 +18,20 @@ const createRestoDetailTemplate = (restaurants) => `
   </div>
   <div class="resto__menu">
     <h3 class="content-label">Menu Makanan</h3>
-      <div class="food-menu-container"></div>
+      <div class="food-menu-container">
+        <ul>
+        </ul>
+      </div>
     <h3 class="content-label">Menu Minuman</h3>
+      <div class="drink-menu-container">
+        <ul>
+        </ul>
+      </div>
   </div>
   <div class="resto__review">
     <h3 class="content-label">Ulasan</h3>
+    <div class="review-container">
+    </div>
   </div>
 `;
  
@@ -42,12 +51,20 @@ const createRestoItemTemplate = (restaurant) => `
   </div>
   `;
 
-  const createRestoFoodMenuTemplate = (restaurant) => `
-  <ul>
-    <li>${restaurant.menus.foods}
-  </ul>
+  const createRestoFoodMenuTemplate = (foods) => `
+  <li>${foods.name}
+  `;
+
+  const createRestoDrinksMenuTemplate = (drinks) => `
+  <li>${drinks.name}
+  `;
+
+  const createRestoReviewTemplate = (customerReviews) => `
+  <p class="review-name">${customerReviews.name}
+  <p>${customerReviews.review}
+  <p>${customerReviews.date}
   `;
 
 
  
-export { createRestoItemTemplate, createRestoDetailTemplate, createRestoFoodMenuTemplate};
+export { createRestoItemTemplate, createRestoDetailTemplate, createRestoFoodMenuTemplate, createRestoDrinksMenuTemplate, createRestoReviewTemplate};

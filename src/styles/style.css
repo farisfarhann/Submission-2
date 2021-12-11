@@ -264,6 +264,11 @@ main {
     text-align: center;
 }
 
+.review-name {
+    font-weight: 600;
+    padding-top: 15px;
+}
+
 
 
 
