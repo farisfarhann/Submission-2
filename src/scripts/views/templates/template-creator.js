@@ -2,24 +2,34 @@ import CONFIG from '../../globals/config';
  
 const createRestoDetailTemplate = (restaurants) => `
   <h2 class="resto__title">${restaurants.name}</h2>
-  <img class="resto__poster" src="${CONFIG.BASE_IMAGE_URL + restaurants.pictureId}" alt="${restaurants.name}" />
+  <img class="resto__poster vcenter" src="${CONFIG.BASE_IMAGE_URL + restaurants.pictureId}" alt="${restaurants.name}" />
   <div class="resto__info">
-  <h3>Information</h3>
+    <h3 class="content-label">Information</h3>
     <h4>Rating</h4>
     <p>${restaurants.rating}</p>
-    <h4>City</h4>
+    <h4>Alamat</h4>
+    <p>${restaurants.address}</p>
+    <h4>Kota</h4>
     <p>${restaurants.city}</p>
   </div>
   <div class="resto__description">
-    <h3>Description</h3>
+  <h3 class="content-label">Deskripsi</h3>
     <p>${restaurants.description}</p>
+  </div>
+  <div class="resto__menu">
+    <h3 class="content-label">Menu Makanan</h3>
+      <div class="food-menu-container"></div>
+    <h3 class="content-label">Menu Minuman</h3>
+  </div>
+  <div class="resto__review">
+    <h3 class="content-label">Ulasan</h3>
   </div>
 `;
  
 const createRestoItemTemplate = (restaurant) => `
   <div class="resto-item">
     <div class="resto-item__header">
-        <img class="resto-item__header__poster" alt="${restaurant.name}"
+        <img class="resto-item__header__poster" alt="${restaurant.menus}"
             src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}">
         <div class="resto-item__header__rating">
             <p>⭐️<span class="resto-item__header__rating__score">${restaurant.rating}</span></p>
@@ -31,5 +41,13 @@ const createRestoItemTemplate = (restaurant) => `
     </div>
   </div>
   `;
+
+  const createRestoFoodMenuTemplate = (restaurant) => `
+  <ul>
+    <li>${restaurant.menus.foods}
+  </ul>
+  `;
+
+
  
-export { createRestoItemTemplate, createRestoDetailTemplate };
+export { createRestoItemTemplate, createRestoDetailTemplate, createRestoFoodMenuTemplate};

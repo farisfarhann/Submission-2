@@ -7,7 +7,7 @@ import { createRestoDetailTemplate } from '../templates/template-creator';
 const Detail = {
   async render() {
     return `
-      <div id="restos" class="restos"></div>
+      <div id="restos" class="restos-detail"></div>
       <div id="likeButtonContainer"></div>
     `;
   },
@@ -15,9 +15,10 @@ const Detail = {
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const restaurant = await RestaurantSource.detailRestaurant(url.id);
-    // console.log(restaurant);
+    console.log(restaurant);
     const restaurantContainer = document.querySelector('#restos');
     restaurantContainer.innerHTML = createRestoDetailTemplate(restaurant);
+    
 
     // LikeButtonInitiator.init({
     //     likeButtonContainer: document.querySelector('#likeButtonContainer'),
