@@ -103,6 +103,11 @@
     .restos .detail {
         grid-template-columns: 1fr;
     }
+
+    .content-label {
+        font-size: 25px;
+        margin-top: 20px;
+    }
 }
 
 @media screen and (min-width: 1600px) {
