@@ -1,14 +1,14 @@
 import UrlParser from '../../routes/url-parser';
 import RestaurantSource from '../../data/restaurant-source';
 import { createRestoDetailTemplate, createRestoFoodMenuTemplate, createRestoDrinksMenuTemplate, createRestoReviewTemplate } from '../templates/template-creator';
-// import LikeButtonInitiator from '../../utils/like-button-initiator';
+import LikeButtonInitiator from '../../utils/like-button-initiator';
 
  
 const Detail = {
   async render() {
     return `
       <div id="restos" class="restos-detail"></div>
-      <div id="likeButtonContainer"></div>
+      <div id="likeButtonContainer"></div>  
     `;
   },
  
@@ -33,22 +33,23 @@ const Detail = {
     const reviewContainer = document.querySelector('.review-container');
     const restaurantReviews = restaurant.customerReviews;
     restaurantReviews.forEach((customerReviews) => {
-      reviewContainer.innerHTML += createRestoReviewTemplate(customerReviews);
+      reviewContainer.innerHTML += createRestoReviewTemplate(customerReviews);  
     });
 
+    // const likeButtonContainer = document.querySelector('#likeButtonContainer');
+    // likeButtonContainer.innerHTML = createLikeButtonTemplate();
 
-    
-
-    // LikeButtonInitiator.init({
-    //     likeButtonContainer: document.querySelector('#likeButtonContainer'),
-    //     movie: {
-    //       id: movie.id,
-    //       title: movie.title,
-    //       overview: movie.overview,
-    //       backdrop_path: movie.backdrop_path,
-    //       vote_average: movie.vote_average,
-    //     },
-    // });
+    LikeButtonInitiator.init({  
+        likeButtonContainer: document.querySelector('#likeButtonContainer'),
+        restaurant: {
+          id: restaurant.id,
+          name: restaurant.name,
+          description: restaurant.description,
+          pictureId: restaurant.pictureId,
+          city: restaurant.city,
+          rating: restaurant.rating
+        },
+    });
   },
 };
  
