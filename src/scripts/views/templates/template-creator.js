@@ -1,5 +1,5 @@
 import CONFIG from '../../globals/config';
- 
+
 const createRestoDetailTemplate = (restaurants) => `
   <h2 class="resto__title">${restaurants.name}</h2>
   <img class="resto__poster vcenter" src="${CONFIG.BASE_IMAGE_URL + restaurants.pictureId}" alt="${restaurants.name}" />
@@ -34,7 +34,7 @@ const createRestoDetailTemplate = (restaurants) => `
     </div>
   </div>
 `;
- 
+
 const createRestoItemTemplate = (restaurant) => `
   <div class="resto-item">
     <div class="resto-item__header">
@@ -51,34 +51,32 @@ const createRestoItemTemplate = (restaurant) => `
   </div>
   `;
 
-  const createRestoFoodMenuTemplate = (foods) => `
+const createRestoFoodMenuTemplate = (foods) => `
   <li>${foods.name}
   `;
 
-  const createRestoDrinksMenuTemplate = (drinks) => `
+const createRestoDrinksMenuTemplate = (drinks) => `
   <li>${drinks.name}
   `;
 
-  const createRestoReviewTemplate = (customerReviews) => `
+const createRestoReviewTemplate = (customerReviews) => `
   <p class="review-name">${customerReviews.name}
   <p>${customerReviews.review}
   <p>${customerReviews.date}
   `;
 
-  const createLikeButtonTemplate = () => `
+const createLikeButtonTemplate = () => `
   <button aria-label="like this restaurant" id="likeButton" class="like">
      <i class="fa fa-heart-o" aria-hidden="true"></i>
   </button>
 `;
- 
+
 const createLikedButtonTemplate = () => `
   <button aria-label="unlike this restaurant" id="likeButton" class="like">
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
 `;
 
-
- 
 export {
   createRestoDetailTemplate,
   createRestoItemTemplate,
