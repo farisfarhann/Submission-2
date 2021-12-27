@@ -1,9 +1,13 @@
 import UrlParser from '../../routes/url-parser';
 import RestaurantSource from '../../data/restaurant-source';
-import { createRestoDetailTemplate, createRestoFoodMenuTemplate, createRestoDrinksMenuTemplate, createRestoReviewTemplate } from '../templates/template-creator';
+import {
+  createRestoDetailTemplate,
+  createRestoFoodMenuTemplate,
+  createRestoDrinksMenuTemplate,
+  createRestoReviewTemplate,
+} from '../templates/template-creator';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
 
- 
 const Detail = {
   async render() {
     return `
@@ -11,7 +15,7 @@ const Detail = {
       <div id="likeButtonContainer"></div>  
     `;
   },
- 
+
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const restaurant = await RestaurantSource.detailRestaurant(url.id);
@@ -33,24 +37,24 @@ const Detail = {
     const reviewContainer = document.querySelector('.review-container');
     const restaurantReviews = restaurant.customerReviews;
     restaurantReviews.forEach((customerReviews) => {
-      reviewContainer.innerHTML += createRestoReviewTemplate(customerReviews);  
+      reviewContainer.innerHTML += createRestoReviewTemplate(customerReviews);
     });
 
     // const likeButtonContainer = document.querySelector('#likeButtonContainer');
     // likeButtonContainer.innerHTML = createLikeButtonTemplate();
 
-    LikeButtonInitiator.init({  
-        likeButtonContainer: document.querySelector('#likeButtonContainer'),
-        restaurant: {
-          id: restaurant.id,
-          name: restaurant.name,
-          description: restaurant.description,
-          pictureId: restaurant.pictureId,
-          city: restaurant.city,
-          rating: restaurant.rating
-        },
+    LikeButtonInitiator.init({
+      likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      restaurant: {
+        id: restaurant.id,
+        name: restaurant.name,
+        description: restaurant.description,
+        pictureId: restaurant.pictureId,
+        city: restaurant.city,
+        rating: restaurant.rating,
+      },
     });
   },
 };
- 
+
 export default Detail;

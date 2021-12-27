@@ -71,15 +71,18 @@ body {
 .app-bar .app-bar__navigation ul li a {
     display: inline-block;
     text-decoration: none;
+    padding: 20px 0;
     color: #f8b524;
-    padding: 8px;
-    margin-bottom: 5px;
     width: 100%;
 }
 
 .hamburgerButton {
     color: #f8b524;
+    min-height: 44px;
+    min-width: 44px;
 }
+
+
 
 /* 
     Hero 
@@ -200,7 +203,9 @@ main {
 }
 
 .resto-item .resto-item__content h3 a {
-    color: #db0000;
+    color: #a3151e;
+    padding: 15px 0;
+
     text-decoration: none;
 }
 
@@ -306,6 +311,7 @@ footer p {
 }
 
 footer p a {
-    color: #db0000;
+    color: #a3151e;
     text-decoration: none;
+    padding: 15px 0;
 }

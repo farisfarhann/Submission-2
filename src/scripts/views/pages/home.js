@@ -1,7 +1,6 @@
 import RestaurantSource from '../../data/restaurant-source';
 import { createRestoItemTemplate } from '../templates/template-creator';
 
- 
 const Home = {
   async render() {
     return `
@@ -14,14 +13,14 @@ const Home = {
       </div>
     `;
   },
- 
+
   async afterRender() {
     const restaurant = await RestaurantSource.home();
     const restaurantContainer = document.querySelector('#restos');
     restaurant.forEach((restaurants) => {
-        restaurantContainer.innerHTML += createRestoItemTemplate(restaurants);
+      restaurantContainer.innerHTML += createRestoItemTemplate(restaurants);
     });
   },
 };
- 
+
 export default Home;
