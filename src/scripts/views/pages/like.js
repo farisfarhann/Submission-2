@@ -1,6 +1,10 @@
 /* eslint-disable */
-import FavoriteMovieIdb from '../../data/favorite-resto-idb';
-import { createRestoItemTemplate } from '../templates/template-creator';
+import FavoriteRestoIdb from '../../data/favorite-resto-idb';
+import FavoriteRestaurantSearchView from './liked-restaurant/favorite-restaurant-search-view';
+
+import template from '../templates/template-creator';
+
+const view = new FavoriteRestaurantSearchView();
 
 const Like = {
   async render() {
@@ -16,10 +20,10 @@ const Like = {
   },
 
   async afterRender() {
-    const restaurant = await FavoriteMovieIdb.getAllRestos();
+    const restaurant = await FavoriteRestoIdb.getAllRestos();
     const restaurantContainer = document.querySelector('#restos');
     restaurant.forEach((restaurant) => {
-      restaurantContainer.innerHTML += createRestoItemTemplate(restaurant);
+      restaurantContainer.innerHTML += template.createRestoItemTemplate(restaurant);
     });
   },
 };

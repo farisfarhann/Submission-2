@@ -1,5 +1,5 @@
 import RestaurantSource from '../../data/restaurant-source';
-import { createRestoItemTemplate } from '../templates/template-creator';
+import template from '../templates/template-creator';
 
 const Home = {
   async render() {
@@ -18,7 +18,7 @@ const Home = {
     const restaurant = await RestaurantSource.home();
     const restaurantContainer = document.querySelector('#restos');
     restaurant.forEach((restaurants) => {
-      restaurantContainer.innerHTML += createRestoItemTemplate(restaurants);
+      restaurantContainer.innerHTML += template.createRestoItemTemplate(restaurants);
     });
   },
 };
