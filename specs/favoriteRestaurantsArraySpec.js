@@ -23,7 +23,7 @@ const FavoriteRestaurantArray = {
       return;
     }
 
-    if (this.getRestaurant(restaurant.id)) {
+    if (this.getResto(restaurant.id)) {
       return;
     }
 

@@ -6,7 +6,7 @@ class FavoriteRestaurantSearchView {
        <div class="content">
        <h2 class="content__heading" >Favorite Restaurants</h2>
        <input id="query" class="caribox" type="text" placeholder="Cari Restoran">
-           <div id="resto" class="restaurants favorite resto"></div>
+           <div id="restos" class="restos"></div>
        </div>
        `;
   }
@@ -29,9 +29,9 @@ class FavoriteRestaurantSearchView {
       html = this._getEmptyRestaurantTemplate();
     }
 
-    document.getElementById('restaurants').innerHTML = html;
+    document.getElementById('restos').innerHTML = html;
 
-    document.getElementById('restaurants').dispatchEvent(new Event('restaurants:updated'));
+    document.getElementById('restos').dispatchEvent(new Event('restaurants:updated'));
   }
 
   _getEmptyRestaurantTemplate() {
