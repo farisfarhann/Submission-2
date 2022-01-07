@@ -4,7 +4,7 @@ class template{
   static createRestoDetailTemplate(restaurants){
     return `
     <h2 class="resto__title">${restaurants.name}</h2>
-    <img class="resto__poster vcenter" src="${CONFIG.BASE_IMAGE_URL + restaurants.pictureId}" alt="${restaurants.name}" />
+    <img class="resto__poster vcenter lazyload" data-src="${CONFIG.BASE_IMAGE_URL + restaurants.pictureId}" alt="${restaurants.name}" />
     <div class="resto__info">
       <h3 class="content-label">Information</h3>
       <h4>Rating</h4>
