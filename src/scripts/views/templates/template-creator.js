@@ -42,8 +42,8 @@ class template{
     return `
     <div class="restaurants resto-item">
       <div class="resto-item__header">
-          <img class="resto-item__header__poster" alt="${restaurant.name || '-'}"
-              src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}">
+          <img class="resto-item__header__poster lazyload" alt="${restaurant.name || '-'}"
+              data-src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}">
           <div class="resto-item__header__rating">
               <p>⭐️<span class="resto-item__header__rating__score">${restaurant.rating || '-'}</span></p>
           </div>

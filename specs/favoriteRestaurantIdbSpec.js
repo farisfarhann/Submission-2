@@ -3,8 +3,8 @@ import FavoriteRestoIdb from '../src/scripts/data/favorite-resto-idb';
 
 describe('Favorite Restaurants Idb Contract Test Implementation', () => {
   afterEach(async () => {
-    (await FavoriteRestoIdb.getAllRestaurants()).forEach(async (restaurants) => {
-      await FavoriteRestoIdb.deleteRestaurant(restaurants.id);
+    (await FavoriteRestoIdb.getAllRestos()).forEach(async (restaurants) => {
+      await FavoriteRestoIdb.deleteResto(restaurants.id);
     });
   });
 
