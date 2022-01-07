@@ -9,12 +9,13 @@ var serviceWorkerOption = {
     "/icons/icon.png",
     "/icons/maskable_icon.png",
     "/index.html",
-    "/manifest.ebb80e4d47c7dd3066b14db0e029b4e6.json",
+    "/manifest.f6e9ad06649f2d4f180cacf906a1898f.json",
     "/icon_1024x1024.2cf6ece964c9e617bdc0a2cc14c35f2b.png",
     "/icon_512x512.8e435c41549b682477f93bec2e73105a.png",
     "/icon_384x384.754137e131da10be89e3d3828b7f42be.png",
     "/icon_256x256.762e63e4165a5757ff5e35f96127ce34.png",
     "/icon_192x192.9df1abc57a6d4439c084d92af57c1be0.png",
+    "/icon_144x144.8c9248a0e412b9b6e26b766929528139.png",
     "/icon_128x128.d0eeb0f8c68d0b6ad86797119932e163.png",
     "/icon_96x96.5e9279ac10a16384049a03b3fffb13e7.png"
   ]
