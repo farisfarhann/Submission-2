@@ -40,7 +40,7 @@ class template{
 
   static createRestoItemTemplate(restaurant){
     return `
-    <div class="restaurants resto-item">
+    <div class="restaurant resto-item">
       <div class="resto-item__header">
           <img class="resto-item__header__poster lazyload" width="auto" height="auto" alt="${restaurant.name || '-'}"
               data-src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}">

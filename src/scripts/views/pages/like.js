@@ -3,8 +3,7 @@ import FavoriteRestoIdb from '../../data/favorite-resto-idb';
 import FavoriteRestaurantSearchView from './liked-restaurant/favorite-restaurant-search-view';
 import FavoriteRestaurantSearchPresenter from './liked-restaurant/favorite-restaurant-search-presenter';
 import FavoriteRestaurantShowPresenter from './liked-restaurant/favorite-restaurant-show-presenter';
-
-import template from '../templates/template-creator';
+// import template from '../templates/template-creator';
 
 const view = new FavoriteRestaurantSearchView();
 
@@ -17,11 +16,11 @@ const Like = {
     new FavoriteRestaurantShowPresenter({ view, favoriteRestaurants: FavoriteRestoIdb });
     new FavoriteRestaurantSearchPresenter({ view, favoriteRestaurants: FavoriteRestoIdb });
 
-    const restaurant = await FavoriteRestoIdb.getAllRestos();
-    const restaurantContainer = document.querySelector('#restos');
-    restaurant.forEach((restaurant) => {
-      restaurantContainer.innerHTML += template.createRestoItemTemplate(restaurant);
-    });
+    // const restaurant = await FavoriteRestoIdb.getAllRestos();
+    // const restaurantContainer = document.querySelector('.restos');
+    // restaurant.forEach((restaurant) => {
+    //   restaurantContainer.innerHTML += template.createRestoItemTemplate(restaurant);
+    // });
   },
 };
 
