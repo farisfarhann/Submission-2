@@ -6,7 +6,7 @@ class FavoriteRestaurantSearchView {
        <div class="content">
        <h2 class="content__heading" >Favorite Restaurants</h2>
        <input id="query" class="caribox" type="text" placeholder="Cari Restoran">
-           <div id="restaurants" class="restaurants favorite"></div>
+           <div id="resto" class="restaurants favorite resto"></div>
        </div>
        `;
   }

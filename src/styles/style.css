@@ -307,6 +307,38 @@ main {
     justify-content: center;
 }
 
+/*
+   Favorite
+*/
+
+.favorite {
+    margin: 0 20px;
+}
+
+.caribox {
+    display: block;
+    background-color: transparent;
+    border: 1px solid #830E0E;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.caribox::placeholder {
+    color: rgb(83, 83, 83);
+}
+
+.content__heading {
+    padding: 20px 0 15px 0;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    color: #830E0E;
+}
+
+
+
 
 
 

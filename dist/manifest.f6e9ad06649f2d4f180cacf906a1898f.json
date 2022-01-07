@@ -27,6 +27,11 @@
       "type": "image/png"
     },
     {
+      "src": "icon_144x144.8c9248a0e412b9b6e26b766929528139.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
       "src": "icon_128x128.d0eeb0f8c68d0b6ad86797119932e163.png",
       "sizes": "128x128",
       "type": "image/png"
