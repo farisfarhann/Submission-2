@@ -1,4 +1,3 @@
-/* eslint-disable */
 import DrawerInitiator from '../utils/drawer-initiator';
 import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
@@ -26,11 +25,11 @@ class App {
     this._content.innerHTML = await page.render();
     await page.afterRender();
 
-    const skipLink = document.querySelector('.skip-link');    
-    skipLink.addEventListener('click', (event) => {      
-    event.preventDefault();
-    document.querySelector('#mainContent').focus();
-}); 
+    const skipLink = document.querySelector('.skip-link');
+    skipLink.addEventListener('click', (event) => {
+      event.preventDefault();
+      document.querySelector('#mainContent').focus();
+    });
   }
 }
 

@@ -1,4 +1,3 @@
-/* eslint-disable */
 import FavoriteRestoIdb from '../data/favorite-resto-idb';
 import template from '../views/templates/template-creator';
 
