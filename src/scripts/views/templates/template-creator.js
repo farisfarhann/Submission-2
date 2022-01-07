@@ -4,7 +4,7 @@ class template{
   static createRestoDetailTemplate(restaurants){
     return `
     <h2 class="resto__title">${restaurants.name}</h2>
-    <img class="resto__poster vcenter lazyload" data-src="${CONFIG.BASE_IMAGE_URL + restaurants.pictureId}" alt="${restaurants.name}" />
+    <img class="resto__poster vcenter lazyload" width="auto" height="auto" data-src="${CONFIG.BASE_IMAGE_URL + restaurants.pictureId}" alt="${restaurants.name}" />
     <div class="resto__info">
       <h3 class="content-label">Information</h3>
       <h4>Rating</h4>
@@ -40,9 +40,9 @@ class template{
 
   static createRestoItemTemplate(restaurant){
     return `
-    <div class="restaurants resto-item">
+    <div class="restaurant resto-item">
       <div class="resto-item__header">
-          <img class="resto-item__header__poster lazyload" alt="${restaurant.name || '-'}"
+          <img class="resto-item__header__poster lazyload" width="auto" height="auto" alt="${restaurant.name || '-'}"
               data-src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}">
           <div class="resto-item__header__rating">
               <p>⭐️<span class="resto-item__header__rating__score">${restaurant.rating || '-'}</span></p>
