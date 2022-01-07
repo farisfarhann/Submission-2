@@ -56,6 +56,10 @@
         height: 100%;
         object-fit: cover;
     }
+
+    .hero-image {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../dist/images/hero-image-large.jpg");
+    }
 }
 
 @media screen and (min-width: 800px) {

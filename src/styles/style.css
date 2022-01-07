@@ -89,18 +89,8 @@ body {
 */
 
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../public/hero-image-small.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../../dist/images/hero-image-small.jpg");
     /* Only override this if one of the conditions for the 1500w image is met */
-}
-
-@media (min-width: 375px) and (max-width: 400px),
-(min-width: 468px) {
-    .hero-image {
-        background-image: url("../public/hero-image-large.jpg");
-    }
-}
-
-.hero-image {
     width: 100%;
     min-height: 300px;
     background-position: center;
@@ -108,6 +98,7 @@ body {
     background-size: cover;
     position: relative;
 }
+
 
 .hero-text {
     text-align: center;
