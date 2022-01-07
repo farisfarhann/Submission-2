@@ -1,8 +1,8 @@
 /* eslint-disable */
 import FavoriteRestoIdb from '../../data/favorite-resto-idb';
 import FavoriteRestaurantSearchView from './liked-restaurant/favorite-restaurant-search-view';
-import FavoriteRestaurantSearchPresenter from './liked-restaurants/favorite-restaurants-search-presenter';
-import FavoriteRestaurantShowPresenter from './liked-restaurants/favorite-restaurant-show-presenter';
+import FavoriteRestaurantSearchPresenter from './liked-restaurant/favorite-restaurant-search-presenter';
+import FavoriteRestaurantShowPresenter from './liked-restaurant/favorite-restaurant-show-presenter';
 
 import template from '../templates/template-creator';
 
