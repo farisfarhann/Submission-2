@@ -29,9 +29,9 @@ class FavoriteRestaurantSearchView {
       html = this._getEmptyRestaurantTemplate();
     }
 
-    document.getElementById('restaurants').innerHTML = html;
+    document.getElementById('resto').innerHTML = html;
 
-    document.getElementById('restaurants').dispatchEvent(new Event('restaurants:updated'));
+    document.getElementById('resto').dispatchEvent(new Event('restaurants:updated'));
   }
 
   _getEmptyRestaurantTemplate() {
