@@ -18,7 +18,7 @@ class FavoriteRestaurantSearchPresenter {
       if (this.latestQuery.length > 0) {
         foundRestaurants = await this._favoriteRestaurants.searchRestaurants(this.latestQuery);
       } else {
-        foundRestaurants = await this._favoriteRestaurants.getAllRestaurants();
+        foundRestaurants = await this._favoriteRestaurants.getAllRestos();
       }
       this._showFoundRestaurants(foundRestaurants);
     }

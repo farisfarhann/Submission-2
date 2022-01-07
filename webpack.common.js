@@ -9,9 +9,6 @@ const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
 const ImageminMozjpeg = require('imagemin-mozjpeg');
 const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const path = require('path');
 
@@ -24,16 +21,27 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        test: /\.(sass|less|css)$/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          },
+        ],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
       },
     ],
   },
   optimization: {
-    minimizer: [
-      new CssMinimizerPlugin(),
-      new UglifyJsPlugin(),
-    ],
     splitChunks: {
       chunks: 'all',
       minSize: 20000,
@@ -122,6 +130,5 @@ module.exports = {
       analyzerMode: 'static',
       openAnalyzer: false,
     }),
-    new MiniCssExtractPlugin(),
   ],
 };
